@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="24dp"
+android:gravity="center_horizontal"
+android:background="@drawable/fondo">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registrar Gasto"
+    android:textColor="#FFFFFF"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="32dp" />
+
+<!-- Monto del Gasto -->
+<EditText
+    android:id="@+id/etMontoGasto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Monto (S/)"
+    android:inputType="numberDecimal"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_marginBottom="16dp" />
+
+<!-- Categoría del Movimiento -->
+<Spinner
+    android:id="@+id/spinnerCategoriaGasto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_marginBottom="16dp" />
+
+<!-- Fecha del Gasto -->
+<EditText
+    android:id="@+id/etFechaGasto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Seleccionar Fecha"
+    android:focusable="false"
+    android:clickable="true"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_marginBottom="32dp" />
+
+<!-- Botón Guardar -->
+<Button
+    android:id="@+id/btnGuardarGasto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="GUARDAR GASTO"
+    android:backgroundTint="#0F4C2A"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    android:padding="14dp" />
+
+</LinearLayout>

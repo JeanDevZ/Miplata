@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         txtRegister.setText(spannable);
         txtRegister.setMovementMethod(LinkMovementMethod.getInstance());
 
-        // 🔐 BOTÓN LOGIN
+        /* 🔐 BOTÓN LOGIN
         btnLogin.setOnClickListener(v -> {
 
             String correo = etCorreo.getText().toString().trim();
@@ -78,6 +78,28 @@ public class MainActivity extends AppCompatActivity {
             }
             Intent intent = new Intent(MainActivity.this, MenuActivity.class);
             startActivity(intent);
+        });*/
+        btnLogin.setOnClickListener(v -> {
+            String correo = etCorreo.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
+
+            if (correo.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Completa los campos", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Datos fijos de prueba temporales para poder entrar
+            if (correo.equals("admin") && password.equals("123456")) {
+                Toast.makeText(this, "Login correcto", Toast.LENGTH_SHORT).show();
+
+                // El salto al menú SOLO ocurre si los datos son correctos
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+                finish(); // Cierra el login para que no puedan regresar con el botón atrás
+            } else {
+                Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+            }
         });
+
     }
 }
