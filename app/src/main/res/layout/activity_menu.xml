@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <!-- ScrollView para asegurar que todos los botones se vean en cualquier pantalla -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo: S/ 0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AhorraPe"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- MÓDULO 1: REGISTRAR INGRESO -->
+            <Button
+                android:id="@+id/btnIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Ingresos"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2E7D32"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- MÓDULO 2: REGISTRAR GASTO -->
+            <Button
+                android:id="@+id/btnGasto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Gastos"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#C62828"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- MÓDULO 3: REGISTRAR RECIBO -->
+            <Button
+                android:id="@+id/btnRegistrarRecibo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Registrar Recibo"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1565C0"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- MÓDULO 4: VER RECIBOS PENDIENTES -->
+            <Button
+                android:id="@+id/btnVerRecibos"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Ver Recibos Pendientes"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#37474F"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- MÓDULO 5: ESTABLECER PRESUPUESTO -->
+            <Button
+                android:id="@+id/btnPresupuesto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Presupuesto y Resumen"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#AD1457"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- MÓDULO 6: METAS DE AHORRO (Espacio reservado para tu lógica futura) -->
+            <Button
+                android:id="@+id/btnMetasAhorro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Metas de Ahorro"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF8F00"
+                android:layout_marginBottom="40dp"/>
+
+            <!-- BOTÓN: CERRAR SESIÓN / SALIR -->
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Cerrar Sesión"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4E342E"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
